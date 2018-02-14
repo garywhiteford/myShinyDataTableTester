@@ -1,3 +1,5 @@
+library(shiny)
+
 # Global values -----------------------------------------------------------
 df_data <- data.frame(col_String = c("A","B","C"),
                       col_Numeric = c(1000, 1/3, 1000 + 1/3),
@@ -17,14 +19,12 @@ server <- function(input, output) {
   
   output$tbl_out2 <- renderTable({df_data},
                                  format.args = list(big.mark = ","))
-  # align = align,
-  # format.args=list(big.mark = ",")
 }
 
 ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
-      h3("DataTable Test App"),
+      h3("Basic DataTable Test App"),
       p("This app demonstrates basic functionality of tables and formatting in Shiny.")
     ),
     mainPanel(
