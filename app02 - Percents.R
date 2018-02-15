@@ -60,8 +60,7 @@ ui <- fluidPage(
       h3("Sample data..."),
       verbatimTextOutput("vrb_out1a"),
       h3("Sample #3"),
-      p("Note: Simply applying ", em("formattable"), " to the dataframe does not format the numeric vectors. 
-        Also, the formattable function ", em("percent()"), " defaults to 2 decimal points."),
+      p("Note: The formattable function ", em("percent()"), " does not work with non-formattable render functions."),
       verbatimTextOutput("vrb_out1b"),
       verbatimTextOutput("vrb_out1c"),
       tableOutput("tbl_out1"),
